@@ -56,7 +56,7 @@ private buildForm() {
 </div>
 ```
 
-#Generate API Client from .Net Core API using NSwag
+# Generate API Client from .Net Core API using NSwag
 
 Link to explain the attributes/values of the config.nswag file
 https://github.com/RicoSuter/NSwag/blob/0dd3b004c6f74234e9db01ec052c523d56c34310/src/NSwag.Commands/Commands/CodeGeneration/OpenApiToTypeScriptClientCommand.cs
