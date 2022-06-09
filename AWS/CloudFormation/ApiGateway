@@ -1,0 +1,14 @@
+## Invoke Lambda via ApiGateway
+### Add Permission to allow a specified ApiGateway endpoint to invoke the lambda
+```
+SampleApiPermission:
+    Type: AWS::Lambda::Permission
+    Properties:
+      Action: "lambda:InvokeFunction"
+      FunctionName: !Ref MyLambdaFnA1
+      Principal: "apigateway.amazonaws.com"
+      SourceArn: !Sub "arn:aws:execute-api:${AWS::Region}:${AWS::AccountId}:<api-id>/*/<method>/<resource>"
+```
+Source: [AWS Knowledge centre](https://aws.amazon.com/premiumsupport/knowledge-center/api-gateway-rest-api-lambda-integrations/)
+
+Note: To see the actual SourceArn navigate into ApiGateway -> Resources -> Method (e.g. POST of a certain resource)
